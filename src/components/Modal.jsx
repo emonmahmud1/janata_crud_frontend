@@ -12,8 +12,6 @@ const Modal = ({ setSelectedData, selectedData }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    console.log(selectedData);
     try {
       const response = await axios.put(
         `http://localhost:5000/trade/${selectedData._id}`,
