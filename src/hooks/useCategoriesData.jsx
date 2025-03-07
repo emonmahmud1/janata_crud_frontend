@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-const useCategoriesData = () => {
-  return <div></div>;
-};
-
-export default useCategoriesData;
 
 export const singleCategoryData = (trade_code) => {
   const [categoryData, setCategoryData] = useState({});
@@ -13,7 +8,7 @@ export const singleCategoryData = (trade_code) => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/trade/${trade_code}`);
+        const res = await fetch(`${import.meta.env.VITE_BASE_URL}trade/${trade_code}`);
         const result = await res.json();
         setCategoryData(result);
       } catch (err) {
@@ -34,7 +29,7 @@ export const getCategories = () => {
     useEffect(() => {
       const loadData = async () => {
         try {
-          const res = await fetch("http://localhost:5000/tradecodes");
+          const res = await fetch(`${import.meta.env.VITE_BASE_URL}tradecodes`);
           const result = await res.json();
         //   console.log(result);
           setTradesCode(result);

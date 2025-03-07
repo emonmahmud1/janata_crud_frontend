@@ -9,7 +9,7 @@ const useLoadData = (page, limit) => {
       setLoading(true);
       try {
         const res = await fetch(
-          `http://localhost:5000/trades?page=${page}&limit=${limit}`
+          `${import.meta.env.VITE_BASE_URL}trades?page=${page}&limit=${limit}`
         );
         const result = await res.json();
         setData(result);

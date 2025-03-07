@@ -14,7 +14,7 @@ const Modal = ({ setSelectedData, selectedData }) => {
     e.preventDefault();
     try {
       const response = await axios.put(
-        `http://localhost:5000/trade/${selectedData._id}`,
+        `${import.meta.env.VITE_BASE_URL}trade/${selectedData._id}`,
         selectedData
       );
       if(response){
