@@ -27,14 +27,23 @@ It provides a user-friendly dashboard for **visualizing stock trade data** with 
 ### 1️⃣ Clone the Repository
 ```sh
 https://github.com/emonmahmud1/janata_crud_frontend.git
+```
 
 ### 2️⃣ Install Dependencies
 ```sh
 npm install
+```
 
 ### 3️⃣ Configure Environment Variables
+Create a `.env` file in the root directory and add:
+```sh
 VITE_BASE_URL=https://janata-crud-backend.vercel.app/
+```
 
 ### 4️⃣ Run the Development Server
 ```sh
 npm run dev
+```
+
+
+
